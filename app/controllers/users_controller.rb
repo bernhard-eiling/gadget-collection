@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    puts logged_in?
     @users = User.all
   end
 

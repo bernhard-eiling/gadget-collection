@@ -1,0 +1,25 @@
+<header class="navbar navbar-inverse">
+  <div class="container">
+    <%= link_to "Gadget Collection", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to "Home", root_path %></li>
+        <% if logged_in? %>
+          <li>LOGGED IN</li>
+          <li><%= link_to "Profile", current_user %></li>
+          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          <li class="divider"></li>
+          <li>
+
+        <% else %>
+          <li>LOGGED OUT</li>
+          <li><%= link_to "Log in", login_path %></li>
+          <li>
+        <% end %>
+
+        <li><%= link_to "Users", users_path %></li>
+
+      </ul>
+    </nav>
+  </div>
+</header>
