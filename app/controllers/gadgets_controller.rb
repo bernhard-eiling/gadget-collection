@@ -21,7 +21,7 @@ class GadgetsController < ApplicationController
   end
 
   def search
-    @gadgets = current_user.gadgets.where("name LIKE :name", name: "%" + params[:search] + "%")
+    @gadgets = current_user.gadgets.where('name LIKE :name', name: "%" + params[:search] + "%")
   end
 
   private

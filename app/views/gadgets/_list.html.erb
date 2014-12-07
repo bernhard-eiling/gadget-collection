@@ -1,6 +1,5 @@
 <% @gadgets.each do |g| %>
   <p>
-    <%= link_to "#{g.name}", user_gadget_path(current_user, g) %></div>
-    <%= image_tag g.image_url.to_s %>
+    <%= link_to "#{g.name}", user_gadget_path(current_user, g) %>
   </p>
 <% end %>

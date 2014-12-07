@@ -1,9 +1,13 @@
-<div><%= link_to "My gadgets", user_gadgets_path(current_user) %></div>
-<div><%= link_to "Create Gadget", new_user_gadget_path(current_user) %></div>
-<p>
-    <%= @user.name %>
-  </p>
+<h3>Your Profile</h3>
 
-  <p>
-    <%= @user.email %>
-  </p>
+<p>
+  Name: <%= @user.name %>
+</p>
+
+<p>
+  Email: <%= @user.email %>
+</p>
+
+<p><%= link_to "My gadgets", user_gadgets_path(@user) %></p>
+
+<p><%= link_to "Create Gadget", new_user_gadget_path(@user) %></p>
