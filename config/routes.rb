@@ -15,4 +15,7 @@ Rails.application.routes.draw do
     resources :gadgets
   end
 
+  #gadgets
+  get     'search'  => 'gadgets#search'
+
 end

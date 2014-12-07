@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'factory_girl_rails'
 gem 'database_cleaner'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'spring'

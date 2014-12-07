@@ -1,4 +1,6 @@
-  <p>
+<div><%= link_to "My gadgets", user_gadgets_path(current_user) %></div>
+<div><%= link_to "Create Gadget", new_user_gadget_path(current_user) %></div>
+<p>
     <%= @user.name %>
   </p>
 

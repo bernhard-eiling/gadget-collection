@@ -5,14 +5,18 @@
       <ul class="nav navbar-nav pull-right">
         <li><%= link_to "Home", root_path %></li>
         <% if logged_in? %>
-          <li>LOGGED IN</li>
           <li><%= link_to "Profile", current_user %></li>
+
+          <li><%= form_tag search_path, method: :get do %>
+            <%= text_field_tag :search, "Search gadgets" %>
+            <%= submit_tag "Search" %>
+          <% end %></li>
+
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
           <li class="divider"></li>
           <li>
 
         <% else %>
-          <li>LOGGED OUT</li>
           <li><%= link_to "Log in", login_path %></li>
           <li>
         <% end %>

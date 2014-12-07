@@ -1,0 +1,13 @@
+<%= form_for @gadget, url: {action: "create"} do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name , class: 'form-control' %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+
+  <%= f.submit "Create Gadget", class: "btn btn-primary" %>
+
+<% end %>
