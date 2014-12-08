@@ -16,8 +16,12 @@ class GadgetsController < ApplicationController
 
   def create
     user = User.find params[:user_id]
-    @gadget = user.gadgets.create(gadget_params)
-    redirect_to user_gadget_path(user, @gadget)
+    @gadget = user.gadgets.new gadget_params
+    if @gadget.save
+      redirect_to user_gadget_path(user, @gadget)
+    else
+      render 'new'
+    end
   end
 
   def search

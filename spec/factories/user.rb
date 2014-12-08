@@ -6,4 +6,10 @@ FactoryGirl.define do
     password "1234567890asdfghj"
   end
 
+  factory :invalid_user, class: User do
+    name "Horst von Fail"
+    email "@@qwdizwedf..."
+    password "1"
+  end
+
 end
